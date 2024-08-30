@@ -6,12 +6,13 @@
 
 html {
   block-size: 100%;
+
 }
 
 .page {
-  width: 1200px;
+  max-width: 1200px;
   height: 800px;
-  margin: 0;
+  margin: 0 auto;
 
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -46,8 +47,60 @@ ol {
 .content {
   width: 1140px;
   height: 534px;
+  display: flex;
+  flex-direction: row;
 }
 
 .result {
-  
+  padding-top: 78px;
+  padding-right: 30px;
+  min-width: 741px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.result__video-container {
+
+}
+
+.result__video {
+  height: 386px;
+  width: 711px;
+  object-fit: fill;
+}
+
+.search-form {
+  display: flex;
+  gap:40px;
+  justify-content: space-between;
+}
+
+.search-form__fieldset {
+  width: 225px;
+  border: none;
+}
+
+.search-form__fieldset-title {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.visually-hidden {
+  position: absolute;
+	width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.search-form__textfield {
+  background-color: transparent;
+  border-left: none;
+  border-right: none;
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
 }
