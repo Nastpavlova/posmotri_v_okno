@@ -10,7 +10,7 @@ html {
 }
 
 .page {
-  max-width: 1200px;
+  width: 1200px;
   height: 800px;
   margin: 0 auto;
 
@@ -104,3 +104,41 @@ ol {
   border-top: 1px solid #FFFFFF;
   border-bottom: 1px solid #FFFFFF;
 }
+
+.content__details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+
+}
+
+
+.content__list {
+  width: 399px;
+  height: 298px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 70.5px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__video-card {
+  display: flex;
+}
+
