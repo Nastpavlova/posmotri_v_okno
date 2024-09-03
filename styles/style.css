@@ -113,6 +113,10 @@ ol {
   border-bottom: 1px solid #fff;
 }
 
+.search-form__label:active .search-form__textfield{
+  border:  none;
+}
+
 
 
 
@@ -171,6 +175,14 @@ input[type="checkbox"]:focus + span {
   outline-offset: -2px;
 }
 
+.content__card-link {
+  display: block;
+}
+
+.content__card-link_current {
+  background-color: #545050;
+
+}
 
 .content__card-link:focus {
   outline: none;
@@ -229,9 +241,11 @@ form .button:focus-visible {
   outline-offset: 1px;
 }
 
-/* form .button:hover {
-  cursor: text;
-} */
+.button:hover {
+  text-decoration: underline;
+}
+
+
 
 input[type="text"]:hover {
   cursor: text;
@@ -309,6 +323,14 @@ input[type="text"]:hover {
   display: flex;
   flex-direction: column;
   gap: 6px;
+}
+
+li:hover .content__video-card-title,
+li:hover .content__video-card-description {
+  text-decoration:  underline;
+  text-underline-offset: 5.5px;
+  text-decoration-thickness: 1.5px;
+  color: #ffffff;
 }
 
 .content__video-card-title {
