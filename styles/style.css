@@ -6,22 +6,17 @@
 
 html {
   block-size: 100%;
-
 }
 
 .page {
-  width: 1200px;
-  height: 800px;
-
+  inline-size: 1200px;
+  block-size: 100%;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
-
   background-color: #1b1919;
-
   display: flex;
   margin: 0 auto;
-  justify-content: center;
   align-items: center;
 }
 
@@ -46,15 +41,14 @@ ol {
 
 .content {
   width: 1140px;
-  height: 534px;
   display: flex;
   flex-direction: row;
+  align-items: flex-end;
+  gap: 30px;
 }
 
 .result {
-  padding-top: 78px;
-  padding-right: 28px;
-  width: 741px;
+  width: 711px;
   display: flex;
   flex-direction: column;
   gap: 11px;
@@ -70,11 +64,8 @@ ol {
   object-fit: fill;
 }
 
-
-
 .search-form {
   display: flex;
-  min-height: 54px;
   gap:40px;
   justify-content: space-between;
 }
@@ -87,9 +78,13 @@ ol {
   border-bottom: 1px solid #FFFFFF;
   padding: 1px;
   width: 225px;
-  height: 27px;
+  min-height: 27px;
   appearance: none;
   color: #ffffff;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
   opacity: 0.7;
 }
 
@@ -102,19 +97,13 @@ ol {
   opacity: 0.7;
 }
 
-
 .search-form__textfield:focus {
   outline: none;
 }
 
-/* .search-form__textfield::placeholder-shown {
-  color: white
-} */
-
 .search-form__label:has(input):has(:focus-visible) {
   outline: 1px solid #ffffff;
-  outline-offset: 1px;
-  height: 100%;
+  outline-offset: 3px;
 }
 
 .search-form__label:hover .search-form__label-text {
@@ -124,9 +113,6 @@ ol {
 .search-form__label:active .search-form__textfield{
   border-color: transparent;
 }
-
-
-
 
 .search-form__fieldset {
   border: none;
@@ -154,7 +140,6 @@ ol {
 }
 
 .search-form__label {
-  height: 22px;
   display: flex;
   align-items: center;
   gap: 5px; 
@@ -186,42 +171,22 @@ input[type="checkbox"]:active + span {
 
 .content__card-link {
   display: block;
-  border: 1px solid transparent;
+  /* border: 1px solid transparent; */
+  text-decoration: none;
+  display: block;  
 }
 
 .content__card-link_current, .content__card-link:active {
   background-color: #545050;
-
 }
 
 .content__card-link:focus {
   outline: none;
 }
 
-
 .content__card-link:focus-visible {
-  outline: 1px solid transparent;
   border: 1px solid #ffffff;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .button {
   background-color: transparent;
@@ -244,38 +209,21 @@ input[type="checkbox"]:active + span {
   background-color: #545050;
 }
 
-form .button:focus-visible {
+.button:focus-visible {
   outline: 1px solid #ffffff;
   outline-offset: 1px;
-}
-
-.more-button:focus-visible {
-  outline: 1px solid #ffffff;
-  outline-offset: 1px;
-  margin: 2px;
-
 }
 
 .button:hover {
   text-decoration: underline;
 }
 
-
-
-input[type="text"]:hover {
-  cursor: text;
-}
-
-
-
-
 .search-form__submit-button {
   min-width: 194px;
 }
 
 .more-button {
-  width: 395px;
-  outline: 1px solid transparent;
+  width:100%;
 }
 
 .content__details {
@@ -286,22 +234,19 @@ input[type="text"]:hover {
   padding-top: 2px;
 }
 
-
 .content__list {
   position: relative;
-  width: 399px;
+  width: 100%;
   height: 300px;
   overflow-y: scroll;
-  overflow-x: hidden;
-  scrollbar-width: none;
+  /* scrollbar-width: none; */
   display: flex;
   flex-direction: column;
-  gap: 29px;
 }
 
-
-
-
+.content__list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
 
 .title {
   font-family: 'Oswald', sans-serif;
@@ -328,21 +273,16 @@ input[type="text"]:hover {
   object-fit: fill;
 }
 
-.content__card-link {
-  text-decoration: none;
-/* нафига */ display: block; 
-}
-
 .content__video-card-description-container {
   width: 100%; 
   max-width: 200px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
-li:hover .content__video-card-title,
-li:hover .content__video-card-description {
+.content__card-link:hover {
   text-decoration:  underline;
   text-underline-offset: 5.5px;
   text-decoration-thickness: 1.5px;
@@ -357,6 +297,9 @@ li:hover .content__video-card-description {
   text-transform: uppercase;
   line-height: 30px;
   margin: 2px 0 0 2px;
+  text-overflow: ellipsis;  
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-description {
