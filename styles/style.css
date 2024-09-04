@@ -12,7 +12,6 @@ html {
 .page {
   width: 1200px;
   height: 800px;
-  margin: 0 auto;
 
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -21,7 +20,7 @@ html {
   background-color: #1b1919;
 
   display: flex;
-  justify-content: center;
+  margin: 0 auto;
   align-items: center;
 }
 
@@ -62,7 +61,6 @@ ol {
 
 .result__video-container {
   position: relative;
-
 }
 
 .result__video {
@@ -70,6 +68,8 @@ ol {
   width: 711px;
   object-fit: fill;
 }
+
+
 
 .search-form {
   display: flex;
@@ -88,6 +88,8 @@ ol {
   width: 225px;
   height: 27px;
   appearance: none;
+  color: #ffffff;
+  opacity: 0.7;
 }
 
 .search-form__textfield::placeholder {
@@ -99,9 +101,14 @@ ol {
   opacity: 0.7;
 }
 
+
 .search-form__textfield:focus {
   outline: none;
 }
+
+/* .search-form__textfield::placeholder-shown {
+  color: white
+} */
 
 .search-form__label:has(input):has(:focus-visible) {
   outline: 1px solid #ffffff;
@@ -114,7 +121,7 @@ ol {
 }
 
 .search-form__label:active .search-form__textfield{
-  border:  none;
+  border-color: transparent;
 }
 
 
@@ -169,7 +176,8 @@ ol {
   border: 1px solid #ffffff;
 }
 
-input[type="checkbox"]:focus + span {
+input[type="checkbox"]:focus + span,
+input[type="checkbox"]:active + span {
   background-color: #fff;
   outline: 1px solid #000;
   outline-offset: -2px;
@@ -177,9 +185,10 @@ input[type="checkbox"]:focus + span {
 
 .content__card-link {
   display: block;
+  border: 1px solid transparent;
 }
 
-.content__card-link_current {
+.content__card-link_current, .content__card-link:active {
   background-color: #545050;
 
 }
@@ -230,15 +239,20 @@ input[type="checkbox"]:focus + span {
   outline: none;
 }
 
+.button:active {
+  background-color: #545050;
+}
+
 form .button:focus-visible {
   outline: 1px solid #ffffff;
   outline-offset: 1px;
 }
 
 .more-button:focus-visible {
-  width: 395px;
   outline: 1px solid #ffffff;
   outline-offset: 1px;
+  margin: 2px;
+
 }
 
 .button:hover {
@@ -260,15 +274,14 @@ input[type="text"]:hover {
 
 .more-button {
   width: 395px;
-  margin: 2px;
-  padding: 0;
+  outline: 1px solid transparent;
 }
 
 .content__details {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 24px;
   padding-top: 2px;
 }
 
@@ -276,7 +289,7 @@ input[type="text"]:hover {
 .content__list {
   position: relative;
   width: 399px;
-  height: 298px;
+  height: 300px;
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-width: none;
@@ -284,6 +297,8 @@ input[type="text"]:hover {
   flex-direction: column;
   gap: 29px;
 }
+
+
 
 
 
