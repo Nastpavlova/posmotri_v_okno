@@ -1,1 +1,1 @@
-git@github.com:Nastpavlova/posmotri_v_okno.git
+https://github.com/Nastpavlova/posmotri_v_okno.git
